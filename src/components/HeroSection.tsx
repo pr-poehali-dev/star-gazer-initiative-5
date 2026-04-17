@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 const images = [
-  'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-2.jpg',
-  'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-1.jpg',
-  'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-4.jpg',
-  'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-5.jpg',
+  'https://cdn.poehali.dev/projects/7fe2bb4a-cfae-40ad-abe9-59bf51837115/files/5d416e8e-83fa-4d97-bb96-f08a45f6ea91.jpg',
+  'https://cdn.poehali.dev/projects/7fe2bb4a-cfae-40ad-abe9-59bf51837115/files/894e78f6-9bee-4e81-91e5-5147217a1620.jpg',
+  'https://cdn.poehali.dev/projects/7fe2bb4a-cfae-40ad-abe9-59bf51837115/files/c3b9d6a6-1780-4e77-8cab-c4a2c0d98fa1.jpg',
+  'https://cdn.poehali.dev/projects/7fe2bb4a-cfae-40ad-abe9-59bf51837115/files/741ddee4-d6d4-44e9-bffa-0e01778bee85.jpg',
 ];
 
 export default function HeroSection() {
@@ -22,7 +22,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-white">
+    <section className="relative h-screen w-full overflow-hidden bg-black">
       <div className="absolute inset-0">
         {images.map((src, index) => (
           <div
@@ -41,7 +41,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
 
       <div className="relative z-10 flex h-full items-center">
         <div className="container mx-auto px-8 md:px-16">
@@ -53,10 +53,10 @@ export default function HeroSection() {
                 isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
               )}
             >
-              <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-2xl md:h-64 md:w-64">
+              <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white/90 shadow-2xl md:h-64 md:w-64">
                 <img
-                  src="https://cdn.poehali.dev/templates/creative-portfolio-ru/portrait.jpg"
-                  alt="Креативный специалист"
+                  src="https://cdn.poehali.dev/projects/7fe2bb4a-cfae-40ad-abe9-59bf51837115/files/7a2ffd9b-871c-4885-9fc2-64de99e39c9e.jpg"
+                  alt="Путешественник"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -69,11 +69,17 @@ export default function HeroSection() {
               )}
             >
               <div className="space-y-4">
+                <p className="text-sm font-medium tracking-[0.3em] text-white/60 uppercase">
+                  Путешественник
+                </p>
                 <p className="text-3xl font-light text-white md:text-4xl lg:text-5xl">
-                  Алексей Иванов
+                  Александр Соколов
                 </p>
                 <p className="text-xl font-light text-white/80 md:text-2xl">
-                  Креативный директор | Дизайнер
+                  40+ стран · Независимый турист
+                </p>
+                <p className="max-w-md text-base font-light leading-relaxed text-white/60">
+                  Исследую мир самостоятельно. Делюсь маршрутами, лайфхаками и вдохновением для тех, кто хочет путешествовать без турагентств.
                 </p>
                 <div className="flex gap-6 pt-4">
                   <a
